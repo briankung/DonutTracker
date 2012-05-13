@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="application.css" type="text/css" media="screen, projection" />
+</head>
+
+<body>
+
+	<div id="header">
+		<strong><%= @search_term.capitalize %> Tracker</strong>
+	</div><!-- #header-->	
+
+
+	<div id="wrapper">
+
+		<div id="middle">
+
+			<div id="container">
+				<div id="content">
+			    		<!--Flickr -->
+
+              <% @photos.each do |photo| %>
+
+                <% photo_result_url =       "http://farm#{photo["farm"]}.staticflickr.com/#{photo["server"]}/#{photo["id"]}_#{photo["secret"]}_q.jpg"%>
+                <% title = photo["title"] %>
+                <%= link_to image_tag(photo_result_url, :title => title), "http://www.flickr.com/photos/#{photo["owner"]}/#{photo["id"]}" %>
+
+              <% end %>
+				</div><!-- #content-->
+				
+				  <%= render "yelp" %>
+				 
+			</div><!-- #container-->
+
+			<div class="sidebar" id="sideLeft">
+				<ul>
+					<% @results.each do |post| %>
+						<li>
+						  <%= image_tag post["profile_image_url"] %>
+							<h3>
+							<%= link_to post["from_user"], 
+							"http://twitter.com/#!/#{post["from_user"]}/status/#{post["id"]}" %>
+							</h3>
+							<%= post["geo"] %><br>
+    					<%= post["text"] %><br>
+    					 <strong><%= post["created_at"] %><br></strong>
+						</li>
+					<% end %>
+				</ul>
+			</div><!-- .sidebar#sideLeft -->
+       
+		</div><!-- #middle-->
+
+	</div><!-- #wrapper -->
+		<div id="footer">
+  			<strong>Copyright Tranker 2012</strong>
+		</div><!-- #footer -->
+		
+		
+	</body>
+	</html>
+
+
+
+

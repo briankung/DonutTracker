@@ -1,0 +1,190 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+h3 {
+	vertical-align: left;
+	font-size: 10px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 14px/18px Arial, Tahoma, Verdana, sans-serif;
+	width: 100%;
+}
+a {
+	color: #fff;
+	outline: none;
+	text-decoration: bold;
+}
+a:hover {
+	text-decoration: none;
+}
+p {
+	margin: 0 0 18px
+}
+img {
+	border: none;
+}
+input {
+	vertical-align: middle;
+}
+#wrapper {
+	width: 1000px;
+	margin: 0 auto;
+	color: #BFEFFF;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+	height: 50px;
+	background: #47A0CC;
+	padding-left: 20px;
+	padding-top: 20px;
+	font-size: 40px;
+	color: #fff;
+	position: relative;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#middle {
+	width: 100%;
+	height: 1%;
+	position: relative;
+}
+#middle:after {
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	float: right;
+}
+#container {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+#content {
+	height: 458px;
+	float: right;
+	margin-top: 20px;
+	width: 612px;
+	
+	
+}
+
+#secondcon {
+	height: 699px;
+	float: right;
+	margin-left: 400px;
+	margin-top: 20px;
+	width: 612px;
+	
+	
+}
+
+
+/* Sidebar Left
+-----------------------------------------------------------------------------*/
+#sideLeft {
+	float: left;
+	width: 400px;
+	height: 100%;
+	margin-left: -100%;	
+}
+
+h3 {
+	color: #fff;
+	outline: none;
+	font-size: 14px;
+	background: #BF6060;
+	     -o-box-shadow: 0 1px 3px #000, inset 0 0 5px #fff; 
+	-webkit-box-shadow: 0 1px 3px #000, inset 0 0 5px #fff; 
+	   -moz-box-shadow: 0 1px 3px #000, inset 0 0 5px #fff;
+	        box-shadow: 0 1px 1px #000, inset 0 0 5px #fff;
+	-webkit-border-radius: 5px 5px 0 0; 
+	   -moz-border-radius: 5px 5px 0 0;
+					border-radius: 5px 5px 0 0;
+	height: 48px;
+	line-height: 48px;
+
+}
+h3 a {
+	text-decoration: none;
+}
+
+h4  {
+	color: #000;
+	outline: none;
+	font-size: 14px;
+	background: #606269;
+	     -o-box-shadow: 0 1px 3px #000, inset 0 0 5px #fff; 
+	-webkit-box-shadow: 0 1px 3px #000, inset 0 0 5px #fff; 
+	   -moz-box-shadow: 0 1px 3px #000, inset 0 0 5px #fff;
+	        box-shadow: 0 1px 1px #000, inset 0 0 5px #fff;
+	-webkit-border-radius: 5px 5px 0 0; 
+	   -moz-border-radius: 5px 5px 0 0;
+					border-radius: 5px 5px 0 0;
+	height: 35px;
+	line-height: 33px;
+	text-decoration: none;
+
+}
+
+}
+h4 a {
+	
+	color: #000;
+}
+
+li {
+	-webkit-border-radius: 5px; 
+	   -moz-border-radius: 5px;
+					border-radius: 5px;
+	list-style: none;
+	color: #000;
+	outline: none;
+	font-size: 13px;
+	background: #f1f1f1;
+	margin: 20px;
+		
+}
+
+li img {
+	-webkit-border-radius: 5px 0 0 0; 
+	   -moz-border-radius: 5px 0 0 0;
+					border-radius: 5px 0 0 0;
+	float: left;
+	margin-right: 10px;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+	height: 20px;
+	background: #47A0CC;
+	padding-left: 20px;
+	padding-top: 8px;
+	font-size: 12px;
+	color: #fff;
+	clear: both;
+}

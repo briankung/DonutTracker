@@ -1,0 +1,17 @@
+<div id="secondcon">
+  <!--Yelp -->
+  <ul>
+    <% @reviews.each do |review| %>
+    <li>
+      <%= link_to image_tag(review["rating_img_url_large"]), 
+      "http://m.yelp.com/biz/#{review["id"]}" %>
+      <h4>
+      <%= link_to review["name"], "http://m.yelp.com/biz/#{review["id"]}" %>
+      </h4>
+      <p>Reviews: <%= review["snippet_text"]%> </p>
+      <p>Address: <%= review["location"]["display_address"][0]%> </p>
+  </li>
+<% end %>
+ </ul>
+ 
+	</div>
